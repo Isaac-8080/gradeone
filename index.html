@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- title -->
+    <title>Mindiva</title>
+
+    <!-- google icons rounded -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <!-- google icons outlined -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <!-- style link -->
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <!-- tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryColor: '#4567b7',
+                        secondaryColor: '#ffc107',
+                        accentColor: '#2ecc71',
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+<body>
+
+    <!-- main container -->
+    <div>
+
+        <header>
+
+            <nav class="flex flex-row items-center justify-between py-4 px-[30px] bg-[#FFFFFF] border-b border-primaryColor border-t-[5px] fixed w-full z-10">
+
+                <!-- brand name -->
+                <span class="text-primaryColor font-black text-[20px]">MINDIVA</span>
+
+                <ul class="flex flex-row items-center space-x-[25px] hidden md:flex">
+
+                    <li class="text-primaryColor">
+                        <a href="#">Home</a>
+                    </li>
+
+                    <li class="">
+                        <a href="">About</a>
+                    </li>
+
+                    <li class="">
+                        <a href="">Contact Us</a>
+                    </li>
+
+                    <a href="" class="border border-accentColor text-accentColor py-1 px-3 rounded-md hover:bg-accentColor hover:text-[#FFFFFF]">
+                        Login
+                    </a>
+
+                    <a href="" class="border border-accentColor bg-accentColor text-[#FFFFFF] py-1 px-5 rounded-md hover:drop-shadow-md">
+                        Sign In
+                    </a>
+
+                </ul>
+
+                <!-- menu icon -->
+                <span class="material-symbols-rounded md:hidden text-primaryColor font-black">
+                    menu
+                </span>
+
+            </nav>
+
+        </header>
+
+        <main>
+            
+            <!-- hero container -->
+            <div class="flex flex-row justify-center">
+
+                <img src="https://media.istockphoto.com/id/588581412/photo/books-on-desk-in-library.jpg?s=612x612&w=0&k=20&c=B-qu_a9fKyln6znID4KtHgEgHhQ2YNAETlakmkZDG3g=" class="w-full h-[100dvh] relative -z-10" alt="hero image" srcset="">
+                
+                <div class="absolute top-[150px] md:top-[250px] ml-5 md:ml-0">
+
+                    <p class="font-black text-5xl md:text-7xl text-secondaryColor">Grow with <span class="text-primaryColor">Mindiva,</span> <br> by learning without limits.</p>
+                    
+                    <br><br>
+
+                    <a href="" class="border border-accentColor bg-accentColor font-bold tracking-wide text-[#FFFFFF] py-4 px-[50px] w-fit rounded-full drop-shadow-lg hover:drop-shadow-2xl">
+                        Get Started
+                    </a>
+                </div>
+                
+            </div>
+
+            <div class="md:mx-[200px]">
+                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero cumque, autem maiores recusandae minus omnis, enim cupiditate saepe tempore voluptatibus nisi culpa nulla aspernatur corrupti! Enim, accusamus ut dolorem ab, corporis ducimus et nulla quidem atque possimus, magnam sint quas maiores assumenda. Quam quisquam facere hic itaque! Eius, nemo delectus?</p> -->
+            </div>
+            
+        </main>
+
+        <footer>
+
+        </footer>
+
+    </div>
+
+</body>
+</html>
