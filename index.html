@@ -40,66 +40,199 @@
 
         <header>
 
-            <nav class="flex flex-row items-center justify-between py-4 px-[30px] bg-[#FFFFFF] border-b border-primaryColor border-t-[5px] fixed w-full z-10">
+            <nav class="flex flex-row items-center justify-between py-4 px-[30px] bg-[#FFFFFF] delay-200 ease-in duration-300 md:hover:text-[#FFFFFF] md:hover:bg-gradient-to-r from-secondaryColor to-primaryColor hover:text-[#FFFFFF] border-primaryColor border-t-[5px] fixed w-full z-10">
 
                 <!-- brand name -->
-                <span class="text-primaryColor font-black text-[20px]">MINDIVA</span>
+                <span class="text-primaryColor font-black md:text-[20px]">MINDIVA</span>
 
                 <ul class="flex flex-row items-center space-x-[25px] hidden md:flex">
 
-                    <li class="text-primaryColor">
+                    <li class="text-secondaryColor">
                         <a href="#">Home</a>
                     </li>
 
-                    <li class="">
-                        <a href="">About</a>
+                    <li>
+                        <a href="about.html">About</a>
                     </li>
 
-                    <li class="">
-                        <a href="">Contact Us</a>
+                    <li>
+                        <a href="contactUs.html">Contact Us</a>
                     </li>
 
-                    <a href="" class="border border-accentColor text-accentColor py-1 px-3 rounded-md hover:bg-accentColor hover:text-[#FFFFFF]">
+                    <a href="login.html" class="border border-accentColor text-accentColor py-1 px-3 rounded-md hover:bg-accentColor hover:text-[#FFFFFF]">
                         Login
                     </a>
 
-                    <a href="" class="border border-accentColor bg-accentColor text-[#FFFFFF] py-1 px-5 rounded-md hover:drop-shadow-md">
+                    <a href="signin.html" class="border border-accentColor bg-accentColor text-[#FFFFFF] py-1 px-5 rounded-md hover:drop-shadow-md">
                         Sign In
                     </a>
 
                 </ul>
 
                 <!-- menu icon -->
-                <span class="material-symbols-rounded md:hidden text-primaryColor font-black">
+                <span class="material-symbols-rounded md:hidden text-primaryColor font-black cursor-pointer" id="toggleMenu">
                     menu
                 </span>
 
             </nav>
 
+            <!-- small screens navbar container -->
+            <nav class="flex flex-row items-center fixed z-10 w-[80%] bg-[#FFFFFF] hidden" id="smScreenNav">
+
+                <ul class="flex flex-col h-[100dvh] space-y-[20px] p-[20px] absolute">
+    
+                    <li>
+                        
+                        <a href="#" class="flex flex-row items-center gap-3 text-primaryColor">
+                            <span class="material-symbols-rounded">home</span>
+                            <span>Home</span>
+                        </a>
+
+                    </li>
+
+                    <li>
+                        
+                        <a href="about.html" class="flex flex-row items-center gap-3">
+                            <span class="material-symbols-rounded">info</span>
+                            <span>About</span>
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="contactUs.html" class="flex flex-row items-center gap-3">
+                            <span class="material-symbols-rounded">call</span>
+                            <span>Contact Us</span>
+                        </a>
+
+                    </li>
+
+                    <div class="flex flex-row items-center gap-3">
+
+                        <a href="login.html" class="border border-accentColor w-fit text-accentColor py-1 px-3 rounded-md hover:bg-accentColor hover:text-[#FFFFFF]">
+                            Login
+                        </a>
+
+                        <a href="signin.html" class="border border-accentColor w-fit bg-accentColor text-[#FFFFFF] py-1 px-5 rounded-md hover:drop-shadow-md">
+                            Sign In
+                        </a>
+
+                    </div>
+
+                </ul>
+
+                <div class="h-[100dvh] w-[25%] cursor-pointer relative left-[100%] bg-[#FFFFFF] opacity-25" id="smScreenNavExit"></div>
+
+            </nav>
+
         </header>
 
-        <main>
+        <main class="">
             
             <!-- hero container -->
-            <div class="flex flex-row justify-center">
+            <div class="flex flex-row justify-center pt-[50px]">
 
-                <img src="https://media.istockphoto.com/id/588581412/photo/books-on-desk-in-library.jpg?s=612x612&w=0&k=20&c=B-qu_a9fKyln6znID4KtHgEgHhQ2YNAETlakmkZDG3g=" class="w-full h-[100dvh] relative -z-10" alt="hero image" srcset="">
+                <img src="https://media.istockphoto.com/id/588581412/photo/books-on-desk-in-library.jpg?s=612x612&w=0&k=20&c=B-qu_a9fKyln6znID4KtHgEgHhQ2YNAETlakmkZDG3g=" class="w-full h-[80dvh] relative -z-10 drop-shadow-2xl" alt="hero image" srcset="">
+                <!-- <img src="https://media.istockphoto.com/id/1460535745/photo/e-learning-graduate-certificate-program-concept-lightbulb-on-the-book-with-graduation-hat-and.jpg?s=612x612&w=0&k=20&c=wjNyV1J_cA-C0p5EiybWbSa-FzTA8YQmvOazDI7uB8g=" class="w-full h-[80dvh] relative -z-10 drop-shadow-2xl" alt="hero image" srcset=""> -->
+                <!-- <img src="https://media.istockphoto.com/id/1482218855/photo/e-learning-and-online-education-graduate-certificate-program-concept-study-or-teaching-by.jpg?s=612x612&w=0&k=20&c=clE2RTskq6l--JyGt8q2LvnJoopoEoMuFbWRByu19UQ=" class="w-full h-[80dvh] relative -z-10 drop-shadow-2xl" alt="hero image" srcset=""> -->
                 
-                <div class="absolute top-[150px] md:top-[250px] ml-5 md:ml-0">
+                <div class="flex flex-col justify-center h-[80dvh] absolute ml-[20px]">
 
-                    <p class="font-black text-5xl md:text-7xl text-secondaryColor">Grow with <span class="text-primaryColor">Mindiva,</span> <br> by learning without limits.</p>
+                    <p class="font-black text-6xl md:text-7xl text-secondaryColor drop-shadow-xl">
+                        Grow and unlock <br> your learning potential <br> with <span class="text-primaryColor">Mindiva.</span> 
+                    </p>
                     
-                    <br><br>
+                    <br>
 
-                    <a href="" class="border border-accentColor bg-accentColor font-bold tracking-wide text-[#FFFFFF] py-4 px-[50px] w-fit rounded-full drop-shadow-lg hover:drop-shadow-2xl">
+                    <a href="login.html" class="border border-accentColor animate-pulse bg-accentColor hover:bg-gradient-to-r from-secondaryColor to-primaryColor font-bold tracking-wide text-[#FFFFFF] py-4 px-[50px] w-fit rounded-full drop-shadow-lg hover:drop-shadow-2xl">
                         Get Started
                     </a>
+
                 </div>
                 
             </div>
 
-            <div class="md:mx-[200px]">
-                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero cumque, autem maiores recusandae minus omnis, enim cupiditate saepe tempore voluptatibus nisi culpa nulla aspernatur corrupti! Enim, accusamus ut dolorem ab, corporis ducimus et nulla quidem atque possimus, magnam sint quas maiores assumenda. Quam quisquam facere hic itaque! Eius, nemo delectus?</p> -->
+            <div class="mt-[50px]">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 px-5 md:mx-[50px]">
+
+                    <div class="drop-shadow-2xl rounded-2xl h-fit w-[100%]">
+                        
+                        <p class="p-5 font-bold text-[20px] text-primaryColor">Why spend more? </p>
+                        <div class="border rounded-2xl  hover:shadow-lg  ease-in duration-300 hover:text-[#FFFFFF] hover:bg-gradient-to-r from-secondaryColor to-primaryColor">
+                            <img src="https://media.istockphoto.com/id/1005938962/photo/customer-buying-books.jpg?s=612x612&w=0&k=20&c=PuKlNCfj-y_Rk-nFCTee_J-YEgmyJXgBVm6EKBCtTIA=" class="rounded-2xl max-h-fit md:h-[30vh] w-[100%]" alt="books on the table" srcset="">
+                            <p class="px-5 py-3 font-medium">Get all the learning resources you need online and save big!</p> 
+                        </div>
+                    
+                    </div>
+                    <div class="drop-shadow-2xl rounded-2xl h-fit w-[100%]">
+
+                        <p class="p-5 font-bold text-[20px] text-primaryColor">Impact On Students</p>
+                        <div class="border rounded-2xl  hover:shadow-lg  ease-in duration-300 hover:text-[#FFFFFF] hover:bg-gradient-to-r from-secondaryColor to-primaryColor">
+                            <img src="https://media.istockphoto.com/id/1156944589/photo/good-friends-give-each-other-study-tips.jpg?s=612x612&w=0&k=20&c=IpsqdvMNadyJ_2EQSNc9EiIvRLDkPS2T5TudAUYq36w=" class="rounded-2xl max-h-fit md:h-[30vh] w-[100%]" alt="happy students" srcset="">
+                            <p class="px-5 py-3 font-medium">A lot of students say we help them get massive ideas to answering questions </p>
+                        </div>
+                    
+                    </div>
+                    <div class="drop-shadow-2xl rounded-2xl h-fit w-[100%]">
+
+                        <p class="p-5 font-bold text-[20px] text-primaryColor">Easy To Connect</p>
+                        <div class="border rounded-2xl  hover:shadow-lg  ease-in duration-300 hover:text-[#FFFFFF] hover:bg-gradient-to-r from-secondaryColor to-primaryColor">
+                            <img src="https://media.istockphoto.com/id/1456192111/photo/smiling-businesswoman-using-a-laptop-computer-in-the-cafe.jpg?s=612x612&w=0&k=20&c=LJqeNL0zdFPqQeN6vSPoj2eIuu56Uq0VA_jd8N1tI20=" class="rounded-2xl max-h-fit md:h-[30vh] w-[100%]" alt="" srcset="">
+                            <p class="px-5 py-3 font-medium">Connect with friends and tutors and solve questions together!</p>
+                        </div>
+                         
+                    </div>
+                    <div class="drop-shadow-2xl rounded-2xl h-fit w-[100%]">
+
+                        <p class="p-5 font-bold text-[20px] text-primaryColor">Making Learning Easy</p>
+                        <div class="border rounded-2xl  hover:shadow-lg  ease-in duration-300 hover:text-[#FFFFFF] hover:bg-gradient-to-r from-secondaryColor to-primaryColor">
+                            <img src="https://media.istockphoto.com/id/1155011115/photo/good-news-of-school-and-learning-success-concept.jpg?s=612x612&w=0&k=20&c=_63IoqA1rQkSgnVUxnrpaofSp02q9QWK8RO5MAB-YD4=" class="rounded-2xl max-h-fit md:h-[30vh] w-[100%]" alt="happy student" srcset="">
+                            <p class="px-5 py-3 font-medium">We make leaning easy everywhere you go and confortable as well!</p>
+                        </div>
+                        
+                    </div>
+
+                    <div class="drop-shadow-2xl rounded-2xl h-fit w-[100%]">
+
+                        <p class="p-5 font-bold text-[20px] text-primaryColor">Our Dedication</p>
+                        <div class="border rounded-2xl  hover:shadow-lg  ease-in duration-300 hover:text-[#FFFFFF] hover:bg-gradient-to-r from-secondaryColor to-primaryColor">
+                            <img src="https://media.istockphoto.com/id/1163674750/photo/portrait-of-beautiful-black-girl-uses-smartphone-while-sitting-on-a-couch-at-home-her-face-is.jpg?s=612x612&w=0&k=20&c=i3yD9UWsCMbdf99z1FiXsafZzuiiL2PlDMz1lN_emIg=" class="rounded-2xl max-h-fit md:h-[30vh] w-[100%]" alt="" srcset="">
+                            <p class="px-5 py-3 font-medium">
+                                Mindiva is dedicated to making learning easier and more affordable. 
+                                Say goodbye to expensive textbooks and say hello to a vast collection of 
+                                educational resources at your fingertips.
+                            </p>
+                        </div>
+                        
+                    </div>
+
+                </div>
+                
+                <div class="flex flex-col-reverse md:flex-row md:items-center gap-5 md:gap-0 bg-primaryColor md:px-[50px] p-5 mt-[50px]">
+
+                    <div class="flex flex-col gap-5 md:p-10">
+
+                        <div class="text-[#FFFFFF] font-bold text-4xl md:text-5xl">
+                            <p>Join now and unlock <br class="hidden md:flex"> endless learning possibilities.</p>
+                        </div>
+
+                        <a href="signin.html" class="flex flex-row items-center gap-3 hover:gap-5 ease-in duration-300 text-[#FFFFFF] font-bold px-5 py-2 rounded-lg bg-accentColor cursor-pointer w-fit">
+                            <span>Join today</span>
+                            <span class="material-symbols-rounded font-bold">
+                                east
+                            </span>
+                        </a>
+
+                    </div>
+
+                    <div>
+                        <img src="https://media.istockphoto.com/id/185007375/photo/join-today-shaped-label-on-price-tag.jpg?s=612x612&w=0&k=20&c=clOjpH2BbMxjIy0vPdbtUCJPI4gD6HPFH9k8gBBiwHc=" class="rounded-2xl" alt="join today" srcset="">
+                    </div>
+
+                </div>
+
             </div>
             
         </main>
@@ -110,5 +243,6 @@
 
     </div>
 
+    <script src="script/global.js"></script>
 </body>
 </html>
