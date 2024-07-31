@@ -1,4 +1,4 @@
-// password
+// enter password
 const password = document.querySelector('#password');
 const showPassword = document.querySelector('#visibility');
 const hidePassword = document.querySelector('#visibilityOff');
@@ -49,32 +49,3 @@ repeatHidePassword.addEventListener('click', () => {
         repeatPassword.type = 'text';
     }
 });
-
-// Function to toggle password visibility
-// const togglePasswordVisibility = (passwordField, showIcon, hideIcon) => {
-//     if (passwordField.type === 'password') {
-//         passwordField.type = 'text';
-//         showIcon.style.display = 'none';
-//         hideIcon.style.display = 'block';
-//     } else {
-//         passwordField.type = 'password';
-//         hideIcon.style.display = 'none';
-//         showIcon.style.display = 'block';
-//     }
-// };
-
-// // Password fields and icons
-// const password = document.querySelector('#password');
-// const showPassword = document.querySelector('#visibility');
-// const hidePassword = document.querySelector('#visibilityOff');
-// const repeatPassword = document.querySelector('#confirmPassword');
-// const repeatShowPassword = document.querySelector('#repectVisibility');
-// const repeatHidePassword = document.querySelector('#repectVisibilityOff');
-
-// // Event listeners for password field
-// showPassword.addEventListener('click', () => togglePasswordVisibility(password, showPassword, hidePassword));
-// hidePassword.addEventListener('click', () => togglePasswordVisibility(password, showPassword, hidePassword));
-
-// // Event listeners for confirm password field
-// repeatShowPassword.addEventListener('click', () => togglePasswordVisibility(repeatPassword, repeatShowPassword, repeatHidePassword));
-// repeatHidePassword.addEventListener('click', () => togglePasswordVisibility(repeatPassword, repeatShowPassword, repeatHidePassword));

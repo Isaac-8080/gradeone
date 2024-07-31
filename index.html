@@ -1,11 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- title -->
-    <title>BestStudent</title>
+    <title>GradeOne</title>
 
     <!-- google icons rounded -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
@@ -16,6 +16,9 @@
     <!-- style link -->
     <link rel="stylesheet" href="./styles/style.css">
 
+    <!-- animation on scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -24,7 +27,7 @@
                 extend: {
                     colors: {
                         primaryColor: '#4567b7',
-                        secondaryColor: '#ffc107',
+                        secondaryColor: '#0B3558',
                         accentColor: '#2ecc71',
                     }
                 }
@@ -40,14 +43,17 @@
 
         <header>
 
-            <nav class="flex flex-row items-center justify-between py-4 px-[30px] bg-[#FFFFFF] delay-200 ease-in duration-300 md:hover:text-[#FFFFFF] md:hover:bg-gradient-to-r from-secondaryColor to-primaryColor hover:text-[#FFFFFF] border-primaryColor border-t-[5px] fixed w-full z-10">
+            <nav class="flex flex-row items-center justify-between py-4 px-[30px] bg-[#FFFFFF] border-t-primaryColor border-t-[2px] border-b fixed w-full z-10">
 
                 <!-- brand name -->
-                <span class="text-primaryColor font-black md:text-[20px]">BestStudent</span>
+                <span class="text-primaryColor font-black md:text-[20px]">
+                    <!-- change brand name in global.js if required -->
+                    <span class="brand-name"></span>
+                </span>
 
                 <ul class="flex flex-row items-center space-x-[25px] hidden md:flex">
 
-                    <li class="text-secondaryColor">
+                    <li class="text-primaryColor">
                         <a href="#">Home</a>
                     </li>
 
@@ -66,6 +72,10 @@
                     <a href="signup.html" class="border border-accentColor bg-accentColor text-[#FFFFFF] py-1 px-5 rounded-md hover:drop-shadow-md">
                         Create Account
                     </a>
+
+                    <!-- <span class="material-symbols-rounded cursor-pointer" id="modeToggle">
+                        dark_mode
+                    </span> -->
 
                 </ul>
 
@@ -133,23 +143,20 @@
             <!-- hero container -->
             <div class="flex flex-row justify-center pt-[70px]">
 
-                <!-- <div class="flex items-bottom justify-between w-full h-[80dvh] bg-primaryColor relative -z-10 drop-shadow-2xl">
-                    <div></div>
-                    <img src="./images/hero-student.png" class="h-[80vh]" alt="hero section student" srcset="">
-                </div> -->
-                <img src="https://media.istockphoto.com/id/588581412/photo/books-on-desk-in-library.jpg?s=612x612&w=0&k=20&c=B-qu_a9fKyln6znID4KtHgEgHhQ2YNAETlakmkZDG3g=" class="w-full h-[80dvh] relative -z-10 drop-shadow-2xl" alt="hero image" srcset="">
-                <!-- <img src="https://media.istockphoto.com/id/1460535745/photo/e-learning-graduate-certificate-program-concept-lightbulb-on-the-book-with-graduation-hat-and.jpg?s=612x612&w=0&k=20&c=wjNyV1J_cA-C0p5EiybWbSa-FzTA8YQmvOazDI7uB8g=" class="w-full h-[80dvh] relative -z-10 drop-shadow-2xl" alt="hero image" srcset=""> -->
-                <!-- <img src="https://media.istockphoto.com/id/1482218855/photo/e-learning-and-online-education-graduate-certificate-program-concept-study-or-teaching-by.jpg?s=612x612&w=0&k=20&c=clE2RTskq6l--JyGt8q2LvnJoopoEoMuFbWRByu19UQ=" class="w-full h-[80dvh] relative -z-10 drop-shadow-2xl" alt="hero image" srcset=""> -->
+                <!-- <img src="https://media.istockphoto.com/id/588581412/photo/books-on-desk-in-library.jpg?s=612x612&w=0&k=20&c=B-qu_a9fKyln6znID4KtHgEgHhQ2YNAETlakmkZDG3g=" class="w-full h-[80dvh] relative -z-10 drop-shadow-2xl" alt="hero image" srcset=""> -->
+                <!-- <img src="https://media.istockphoto.com/id/1144649673/photo/blurred-abstract-glass-wall-from-building-in-city-town.jpg?s=612x612&w=0&k=20&c=wsCeEiQZX6u9tkihXMeuFHH0zFXkkCZOAClsSWGIrtw=" class="w-full h-[80dvh] relative -z-10 drop-shadow-2xl" alt="hero image" srcset=""> -->
                 
-                <div class="flex flex-col justify-center h-[80dvh] absolute px-[10px]">
+                <div class="flex flex-col justify-center h-[80dvh] px-[20px]">
 
                     <p class="font-black text-6xl md:text-7xl text-secondaryColor drop-shadow-xl">
-                        Grow and unlock <br> your learning potential <br> with <span class="text-primaryColor tracking-tighter">BestStudent.</span> 
+                        Grow and unlock <br> your learning potential <br> with
+                            <!-- change brand name in global.js if required -->
+                            <span class="brand-name text-primaryColor"></span>.
                     </p>
                     
                     <br>
 
-                    <a href="signin.html" class="border border-accentColor animate-pulse bg-accentColor hover:bg-gradient-to-r from-secondaryColor to-primaryColor font-bold tracking-wide text-[#FFFFFF] py-4 px-[50px] w-fit rounded-full drop-shadow-lg hover:drop-shadow-2xl">
+                    <a href="signin.html" class="bg-accentColor opacity-90 hover:opacity-100 ease-in duration-300 font-bold tracking-wide text-[#FFFFFF] py-4 px-[50px] w-fit rounded-3xl drop-shadow-lg hover:drop-shadow-2xl">
                         Get Started
                     </a>
 
@@ -163,36 +170,39 @@
 
                     <div class="drop-shadow-2xl rounded-2xl h-fit w-[100%]">
                         
-                        <p class="p-5 font-bold text-[20px] text-primaryColor">Why spend more? </p>
+                        <p class="p-5 mt-5 font-bold text-[20px] text-primaryColor">Why spend more? </p>
                         <div class="border rounded-2xl  hover:shadow-lg  ease-in duration-300 hover:text-[#FFFFFF] hover:bg-gradient-to-r from-secondaryColor to-primaryColor">
-                            <img src="https://media.istockphoto.com/id/1005938962/photo/customer-buying-books.jpg?s=612x612&w=0&k=20&c=PuKlNCfj-y_Rk-nFCTee_J-YEgmyJXgBVm6EKBCtTIA=" class="rounded-2xl max-h-fit md:h-[30vh] w-[100%]" alt="books on the table" srcset="">
+                            <img src="https://media.istockphoto.com/id/1005938962/photo/customer-buying-books.jpg?s=612x612&w=0&k=20&c=PuKlNCfj-y_Rk-nFCTee_J-YEgmyJXgBVm6EKBCtTIA=" class="rounded-2xl max-h-fit md:h-[35vh] w-[100%]" alt="books on the table" srcset="">
                             <p class="px-5 py-3 font-medium">Get all the learning resources you need online and save big!</p> 
                         </div>
                     
                     </div>
                     <div class="drop-shadow-2xl rounded-2xl h-fit w-[100%]">
 
-                        <p class="p-5 font-bold text-[20px] text-primaryColor">Impact On Students</p>
+                        <p class="p-5 mt-5 font-bold text-[20px] text-primaryColor">Impact On Students</p>
                         <div class="border rounded-2xl  hover:shadow-lg  ease-in duration-300 hover:text-[#FFFFFF] hover:bg-gradient-to-r from-secondaryColor to-primaryColor">
-                            <img src="https://media.istockphoto.com/id/1156944589/photo/good-friends-give-each-other-study-tips.jpg?s=612x612&w=0&k=20&c=IpsqdvMNadyJ_2EQSNc9EiIvRLDkPS2T5TudAUYq36w=" class="rounded-2xl max-h-fit md:h-[30vh] w-[100%]" alt="happy students" srcset="">
-                            <p class="px-5 py-3 font-medium">A lot of students say we help them get massive ideas to answering questions </p>
+                            <img src="https://media.istockphoto.com/id/1156944589/photo/good-friends-give-each-other-study-tips.jpg?s=612x612&w=0&k=20&c=IpsqdvMNadyJ_2EQSNc9EiIvRLDkPS2T5TudAUYq36w=" class="rounded-2xl max-h-fit md:h-[35vh] w-[100%]" alt="happy students" srcset="">
+                            <p class="px-5 py-3 font-medium">A lot of students say 
+                                <!-- change brand name in global.js if required --> 
+                                "<span class="brand-name"></span>"
+                                help them get massive ideas to answering questions </p>
                         </div>
                     
                     </div>
                     <div class="drop-shadow-2xl rounded-2xl h-fit w-[100%]">
 
-                        <p class="p-5 font-bold text-[20px] text-primaryColor">Easy To Connect</p>
+                        <p class="p-5 mt-5 font-bold text-[20px] text-primaryColor">Easy To Connect</p>
                         <div class="border rounded-2xl  hover:shadow-lg  ease-in duration-300 hover:text-[#FFFFFF] hover:bg-gradient-to-r from-secondaryColor to-primaryColor">
-                            <img src="https://media.istockphoto.com/id/1456192111/photo/smiling-businesswoman-using-a-laptop-computer-in-the-cafe.jpg?s=612x612&w=0&k=20&c=LJqeNL0zdFPqQeN6vSPoj2eIuu56Uq0VA_jd8N1tI20=" class="rounded-2xl max-h-fit md:h-[30vh] w-[100%]" alt="" srcset="">
+                            <img src="https://media.istockphoto.com/id/1456192111/photo/smiling-businesswoman-using-a-laptop-computer-in-the-cafe.jpg?s=612x612&w=0&k=20&c=LJqeNL0zdFPqQeN6vSPoj2eIuu56Uq0VA_jd8N1tI20=" class="rounded-2xl max-h-fit md:h-[35vh] w-[100%]" alt="" srcset="">
                             <p class="px-5 py-3 font-medium">Connect with friends and tutors and solve questions together!</p>
                         </div>
                          
                     </div>
                     <div class="drop-shadow-2xl rounded-2xl h-fit w-[100%]">
 
-                        <p class="p-5 font-bold text-[20px] text-primaryColor">Making Learning Easy</p>
+                        <p class="p-5 mt-5 font-bold text-[20px] text-primaryColor">Making Learning Easy</p>
                         <div class="border rounded-2xl  hover:shadow-lg  ease-in duration-300 hover:text-[#FFFFFF] hover:bg-gradient-to-r from-secondaryColor to-primaryColor">
-                            <img src="https://media.istockphoto.com/id/1155011115/photo/good-news-of-school-and-learning-success-concept.jpg?s=612x612&w=0&k=20&c=_63IoqA1rQkSgnVUxnrpaofSp02q9QWK8RO5MAB-YD4=" class="rounded-2xl max-h-fit md:h-[30vh] w-[100%]" alt="happy student" srcset="">
+                            <img src="https://media.istockphoto.com/id/1155011115/photo/good-news-of-school-and-learning-success-concept.jpg?s=612x612&w=0&k=20&c=_63IoqA1rQkSgnVUxnrpaofSp02q9QWK8RO5MAB-YD4=" class="rounded-2xl max-h-fit md:h-[35vh] w-[100%]" alt="happy student" srcset="">
                             <p class="px-5 py-3 font-medium">We make leaning easy everywhere you go and confortable as well!</p>
                         </div>
                         
@@ -200,11 +210,13 @@
 
                     <div class="drop-shadow-2xl rounded-2xl h-fit w-[100%]">
 
-                        <p class="p-5 font-bold text-[20px] text-primaryColor">Our Dedication</p>
+                        <p class="p-5 mt-5 font-bold text-[20px] text-primaryColor">Our Dedication</p>
                         <div class="border rounded-2xl  hover:shadow-lg  ease-in duration-300 hover:text-[#FFFFFF] hover:bg-gradient-to-r from-secondaryColor to-primaryColor">
-                            <img src="https://media.istockphoto.com/id/1163674750/photo/portrait-of-beautiful-black-girl-uses-smartphone-while-sitting-on-a-couch-at-home-her-face-is.jpg?s=612x612&w=0&k=20&c=i3yD9UWsCMbdf99z1FiXsafZzuiiL2PlDMz1lN_emIg=" class="rounded-2xl max-h-fit md:h-[30vh] w-[100%]" alt="" srcset="">
+                            <img src="https://media.istockphoto.com/id/1163674750/photo/portrait-of-beautiful-black-girl-uses-smartphone-while-sitting-on-a-couch-at-home-her-face-is.jpg?s=612x612&w=0&k=20&c=i3yD9UWsCMbdf99z1FiXsafZzuiiL2PlDMz1lN_emIg=" class="rounded-2xl max-h-fit md:h-[35vh] w-[100%]" alt="" srcset="">
                             <p class="px-5 py-3 font-medium">
-                                BestStudent is dedicated to making learning easier and more affordable. 
+                                <!-- change brand name in global.js if required -->
+                                <span class="brand-name"></span> 
+                                is dedicated to making learning easier and more affordable. 
                                 Say goodbye to expensive textbooks and say hello to a vast collection of 
                                 educational resources at your fingertips.
                             </p>
@@ -214,6 +226,7 @@
 
                 </div>
                 
+                <!-- join now message with button directing users to sign up -->
                 <div class="flex flex-col-reverse md:flex-row md:items-center gap-5 md:gap-0 bg-primaryColor md:px-[50px] p-5 mt-[50px]">
 
                     <div class="flex flex-col gap-5 md:p-10">
@@ -222,7 +235,7 @@
                             <p>Join now and unlock <br class="hidden md:flex"> endless learning possibilities.</p>
                         </div>
 
-                        <a href="signup.html" class="flex flex-row items-center gap-3 hover:gap-5 ease-in duration-300 text-[#FFFFFF] font-bold px-5 py-2 rounded-lg bg-accentColor cursor-pointer w-fit">
+                        <a href="signup.html" class="flex flex-row items-center gap-3 hover:gap-5 ease-in duration-300 text-[#FFFFFF] font-bold px-5 py-4 rounded-lg bg-accentColor cursor-pointer w-fit">
                             <span>Join today</span>
                             <span class="material-symbols-rounded font-bold">
                                 east
@@ -233,6 +246,76 @@
 
                     <div>
                         <img src="https://media.istockphoto.com/id/185007375/photo/join-today-shaped-label-on-price-tag.jpg?s=612x612&w=0&k=20&c=clOjpH2BbMxjIy0vPdbtUCJPI4gD6HPFH9k8gBBiwHc=" class="rounded-2xl" alt="join today" srcset="">
+                    </div>
+
+                </div>
+
+                <div class="flex flex-col md:flex-row md:justify-between gap-5 md:gap-0 md:px-[50px] p-5 my-[50px]">
+
+                    <p class="text-2xl md:text-4xl font-bold">Frequently Asked 
+                        <br class="hidden md:flex">
+                        <span class="material-symbols-outlined text-2xl md:text-4xl font-bold p-0 m-0 text-primaryColor">help</span>uestions
+                    </p>
+
+                    <div class="flex flex-col justify-between gap-7 md:w-[50%]">
+
+                        <div class="flex flex-col gap-3">
+                            <div data-aos="fade-up" data-aos-anchor-placement="center-up" data-aos-duration="1000">
+                                <h2 class="bg-accentColor w-fit py-1 px-3 font-bold rounded text-[#FFFFFF]">Courses & Enrollment</h2>
+                            </div>
+                            <div class="flex flex-row items-center justify-between gap-3">
+                                <div>
+                                    <p class="text-secondaryColor">What courses are available?</p>
+                                </div>
+                                <div>
+                                    <span class="material-symbols-outlined accordionToggle cursor-pointer bg-accentColor rounded-full p-1 text-[#FFFFFF]">
+                                        keyboard_arrow_down
+                                    </span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="hidden accordionText px-5 text-[14px]">
+                                    We offer a variety of courses in web development, data science, machine learning, and more.
+                                </p>
+                            </div>
+                            <hr>
+
+                            <div class="flex flex-row items-center justify-between gap-3">
+                                <div>
+                                    <p class="text-secondaryColor">How do I enroll in a course?</p>
+                                </div>
+                                <div>
+                                    <span class="material-symbols-outlined accordionToggle cursor-pointer bg-accentColor rounded-full p-1 text-[#FFFFFF]">
+                                        keyboard_arrow_down
+                                    </span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="hidden accordionText px-5 text-[14px]">
+                                    You can enroll by signing up on our website and selecting the course you're interested in.
+                                </p>
+                            </div>
+                            <hr>
+
+                            <div class="flex flex-row items-center justify-between gap-3">
+                                <div>
+                                    <p class="text-secondaryColor">Are the courses self-paced?</p>
+                                </div>
+                                <div>
+                                    <span class="material-symbols-outlined accordionToggle cursor-pointer bg-accentColor rounded-full p-1 text-[#FFFFFF]">
+                                        keyboard_arrow_down
+                                    </span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="hidden accordionText px-5 text-[14px]">
+                                    Yes, most of our courses are self-paced, allowing you to learn at your own speed.
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="text-[14px]">For more FAQ <a href="faq.html" class="underline text-primaryColor">click here &RightArrow;</a></p>
+
                     </div>
 
                 </div>
@@ -248,5 +331,12 @@
     </div>
 
     <script src="script/global.js"></script>
+    <script src="script/main.js"></script>
+
+    <!-- animation on scroll -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>

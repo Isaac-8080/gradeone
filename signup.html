@@ -1,11 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- title -->
-    <title>Mindiva</title>
+    <title>GradeOne</title>
 
     <!-- google icons rounded -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
@@ -24,7 +24,7 @@
                 extend: {
                     colors: {
                         primaryColor: '#4567b7',
-                        secondaryColor: '#ffc107',
+                        secondaryColor: '#0B3558',
                         accentColor: '#2ecc71',
                     }
                 }
@@ -40,14 +40,17 @@
 
         <header>
 
-            <nav class="flex flex-row items-center justify-between py-4 px-[30px] bg-[#FFFFFF] delay-200 ease-in duration-300 border-primaryColor border-t-[5px] fixed w-full z-10">
+            <nav class="flex flex-row items-center justify-between py-4 px-[30px] bg-[#FFFFFF] border-t-primaryColor border-t-[2px] border-b fixed w-full z-10">
 
                 <!-- brand name -->
-                <span class="text-primaryColor font-black md:text-[20px]">MINDIVA</span>
+                <span class="text-primaryColor font-black md:text-[20px]">
+                    <!-- change brand name in global.js if required -->
+                    <span class="brand-name"></span>
+                </span>
 
                 <ul class="flex flex-row items-center space-x-[25px] hidden md:flex">
 
-                    <li class="text-secondaryColor">
+                    <li class="text-primaryColor">
                         <a href="index.html">Home</a>
                     </li>
 
@@ -188,7 +191,10 @@
 
                         <div class="flex flex-row items-center gap-2 mb-4 mt-2">
                             <input type="checkbox" name="checkbox" id="checkbox" checked>
-                            <label for="checkbox" class="text-[12px]">I agree to all terms and conditions of Mindiva</label>
+                            <label for="checkbox" class="text-[12px]">I agree to all terms and conditions of 
+                                <!-- change brand name in global.js if required -->
+                                <span class="brand-name"></span>
+                            </label>
                         </div>
 
                         <div class="">
